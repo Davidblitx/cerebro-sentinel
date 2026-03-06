@@ -1,0 +1,541 @@
+{
+  "nodes": [
+    {
+      "id": "docker",
+      "category": "devops",
+      "description": ""
+    },
+    {
+      "id": "platform",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "applications",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "containers",
+      "category": "devops",
+      "description": ""
+    },
+    {
+      "id": "processes",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "services",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "developers",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "workflows",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "productivity",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "kubernetes",
+      "category": "devops",
+      "description": ""
+    },
+    {
+      "id": "containerized_applications",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "nodes",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "pods",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "deployments",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "statefulsets",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "configmaps",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "secrets",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "networks",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "storage",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "aws iam",
+      "category": "cloud_security",
+      "description": ""
+    },
+    {
+      "id": "iam",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "users",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "policies",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "roles",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "permissions",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "access",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "accounts",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "identity",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "authentication",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "authorization",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "images",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "api",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "cli",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "owasp",
+      "category": "security",
+      "description": ""
+    },
+    {
+      "id": "owasp top 10",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "owasp top ten",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "owasp foundation",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "owasp community",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "owasp project",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "owasp tools",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "containerized applications",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "deployment",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "network policies",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "storage classes",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "events",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "iam users",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "docker api",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "docker cli",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "web applications",
+      "category": "general",
+      "description": ""
+    }
+  ],
+  "edges": [
+    {
+      "source": "docker",
+      "target": "platform",
+      "relationship": "manages"
+    },
+    {
+      "source": "docker",
+      "target": "containers",
+      "relationship": "manages"
+    },
+    {
+      "source": "docker",
+      "target": "developers",
+      "relationship": "enables"
+    },
+    {
+      "source": "docker",
+      "target": "api",
+      "relationship": "uses"
+    },
+    {
+      "source": "docker",
+      "target": "cli",
+      "relationship": "uses"
+    },
+    {
+      "source": "docker",
+      "target": "applications",
+      "relationship": "secures"
+    },
+    {
+      "source": "platform",
+      "target": "applications",
+      "relationship": "runs_on"
+    },
+    {
+      "source": "applications",
+      "target": "containers",
+      "relationship": "part_of"
+    },
+    {
+      "source": "containers",
+      "target": "processes",
+      "relationship": "isolates"
+    },
+    {
+      "source": "containers",
+      "target": "docker",
+      "relationship": "managed_by"
+    },
+    {
+      "source": "containers",
+      "target": "images",
+      "relationship": "new_images_based_on"
+    },
+    {
+      "source": "containers",
+      "target": "networks",
+      "relationship": "connects_to"
+    },
+    {
+      "source": "containers",
+      "target": "storage",
+      "relationship": "attaches"
+    },
+    {
+      "source": "containers",
+      "target": "docker api",
+      "relationship": "uses"
+    },
+    {
+      "source": "containers",
+      "target": "docker cli",
+      "relationship": "uses"
+    },
+    {
+      "source": "processes",
+      "target": "services",
+      "relationship": "enables"
+    },
+    {
+      "source": "services",
+      "target": "applications",
+      "relationship": "secures"
+    },
+    {
+      "source": "developers",
+      "target": "workflows",
+      "relationship": "optimizes"
+    },
+    {
+      "source": "workflows",
+      "target": "productivity",
+      "relationship": "enhances"
+    },
+    {
+      "source": "kubernetes",
+      "target": "containerized_applications",
+      "relationship": "manages"
+    },
+    {
+      "source": "kubernetes",
+      "target": "nodes",
+      "relationship": "manages"
+    },
+    {
+      "source": "kubernetes",
+      "target": "pods",
+      "relationship": "manages"
+    },
+    {
+      "source": "kubernetes",
+      "target": "services",
+      "relationship": "manages"
+    },
+    {
+      "source": "kubernetes",
+      "target": "deployments",
+      "relationship": "manages"
+    },
+    {
+      "source": "kubernetes",
+      "target": "statefulsets",
+      "relationship": "manages"
+    },
+    {
+      "source": "kubernetes",
+      "target": "configmaps",
+      "relationship": "manages"
+    },
+    {
+      "source": "kubernetes",
+      "target": "secrets",
+      "relationship": "manages"
+    },
+    {
+      "source": "kubernetes",
+      "target": "networks",
+      "relationship": "extends"
+    },
+    {
+      "source": "kubernetes",
+      "target": "storage",
+      "relationship": "manages"
+    },
+    {
+      "source": "kubernetes",
+      "target": "containerized applications",
+      "relationship": "manages"
+    },
+    {
+      "source": "kubernetes",
+      "target": "deployment",
+      "relationship": "extends"
+    },
+    {
+      "source": "kubernetes",
+      "target": "network policies",
+      "relationship": "manages"
+    },
+    {
+      "source": "kubernetes",
+      "target": "storage classes",
+      "relationship": "manages"
+    },
+    {
+      "source": "kubernetes",
+      "target": "events",
+      "relationship": "monitors"
+    },
+    {
+      "source": "aws iam",
+      "target": "iam users",
+      "relationship": "manages"
+    },
+    {
+      "source": "iam",
+      "target": "users",
+      "relationship": "manages"
+    },
+    {
+      "source": "iam",
+      "target": "policies",
+      "relationship": "manages"
+    },
+    {
+      "source": "iam",
+      "target": "roles",
+      "relationship": "manages"
+    },
+    {
+      "source": "iam",
+      "target": "permissions",
+      "relationship": "manages"
+    },
+    {
+      "source": "iam",
+      "target": "access",
+      "relationship": "secures"
+    },
+    {
+      "source": "iam",
+      "target": "accounts",
+      "relationship": "manages"
+    },
+    {
+      "source": "iam",
+      "target": "services",
+      "relationship": "secures"
+    },
+    {
+      "source": "iam",
+      "target": "identity",
+      "relationship": "manages"
+    },
+    {
+      "source": "iam",
+      "target": "authentication",
+      "relationship": "manages"
+    },
+    {
+      "source": "iam",
+      "target": "authorization",
+      "relationship": "manages"
+    },
+    {
+      "source": "images",
+      "target": "containers",
+      "relationship": "creates"
+    },
+    {
+      "source": "owasp",
+      "target": "owasp foundation",
+      "relationship": "part_of"
+    },
+    {
+      "source": "owasp",
+      "target": "owasp community",
+      "relationship": "part_of"
+    },
+    {
+      "source": "owasp",
+      "target": "owasp project",
+      "relationship": "part_of"
+    },
+    {
+      "source": "owasp",
+      "target": "owasp tools",
+      "relationship": "part_of"
+    },
+    {
+      "source": "owasp top 10",
+      "target": "owasp top ten",
+      "relationship": "identical"
+    },
+    {
+      "source": "owasp top 10",
+      "target": "owasp",
+      "relationship": "part_of"
+    },
+    {
+      "source": "owasp top ten",
+      "target": "owasp top 10",
+      "relationship": "identical"
+    },
+    {
+      "source": "owasp top ten",
+      "target": "web applications",
+      "relationship": "secures"
+    },
+    {
+      "source": "owasp foundation",
+      "target": "owasp",
+      "relationship": "part_of"
+    },
+    {
+      "source": "owasp community",
+      "target": "owasp",
+      "relationship": "part_of"
+    },
+    {
+      "source": "owasp project",
+      "target": "owasp",
+      "relationship": "part_of"
+    },
+    {
+      "source": "owasp tools",
+      "target": "owasp",
+      "relationship": "part_of"
+    }
+  ]
+}
