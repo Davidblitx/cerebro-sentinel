@@ -72,8 +72,8 @@ def understand_and_store(text: str, source: str):
         print(f"[CEREBRO LEARNING] ❌ Could not extract content from {source}")
         return
 
-    chunk_size = 3000
-    chunks = [text[i:i+chunk_size] for i in range(0, min(len(text), 12000), chunk_size)]
+    chunk_size = 2000
+    chunks = [text[i:i+chunk_size] for i in range(0, min(len(text), 5000), chunk_size)]
     
     total_concepts = 0
     total_qa = 0

@@ -244,6 +244,161 @@
       "id": "web applications",
       "category": "general",
       "description": ""
+    },
+    {
+      "id": "aws s3",
+      "category": "cloud",
+      "description": ""
+    },
+    {
+      "id": "amazon s3",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "s3 bucket",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "data",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "security",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "encryption",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "aws ec2",
+      "category": "cloud",
+      "description": ""
+    },
+    {
+      "id": "amazon ec2",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "ec2",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "cloud_computing",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "virtual_servers",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "on-demand_instances",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "reservation_pricing",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "scalability",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "ami_images",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "elastic_ip",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "elastic_block_store",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "aws vpc",
+      "category": "cloud",
+      "description": ""
+    },
+    {
+      "id": "vpc",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "ecs",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "managing",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "aws",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "ssl tls",
+      "category": "security",
+      "description": ""
+    },
+    {
+      "id": "ssl/tls",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "https",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "oauth2",
+      "category": "security",
+      "description": ""
+    },
+    {
+      "id": "tokens",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "imap protocol",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "email access",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "microsoft email",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "2024",
+      "category": "general",
+      "description": ""
     }
   ],
   "edges": [
@@ -473,6 +628,16 @@
       "relationship": "manages"
     },
     {
+      "source": "policies",
+      "target": "permissions",
+      "relationship": "specify"
+    },
+    {
+      "source": "access",
+      "target": "policies",
+      "relationship": "defined_by"
+    },
+    {
       "source": "images",
       "target": "containers",
       "relationship": "creates"
@@ -536,6 +701,146 @@
       "source": "owasp tools",
       "target": "owasp",
       "relationship": "part_of"
+    },
+    {
+      "source": "amazon s3",
+      "target": "s3 bucket",
+      "relationship": "contains"
+    },
+    {
+      "source": "amazon s3",
+      "target": "security",
+      "relationship": "secures"
+    },
+    {
+      "source": "s3 bucket",
+      "target": "data",
+      "relationship": "stores"
+    },
+    {
+      "source": "data",
+      "target": "amazon s3",
+      "relationship": "uploaded_to"
+    },
+    {
+      "source": "data",
+      "target": "access",
+      "relationship": "controls"
+    },
+    {
+      "source": "security",
+      "target": "encryption",
+      "relationship": "ensures"
+    },
+    {
+      "source": "encryption",
+      "target": "data",
+      "relationship": "protects"
+    },
+    {
+      "source": "amazon ec2",
+      "target": "ec2",
+      "relationship": "is"
+    },
+    {
+      "source": "ec2",
+      "target": "cloud_computing",
+      "relationship": "part_of"
+    },
+    {
+      "source": "ec2",
+      "target": "virtual_servers",
+      "relationship": "enables"
+    },
+    {
+      "source": "ec2",
+      "target": "on-demand_instances",
+      "relationship": "offers"
+    },
+    {
+      "source": "ec2",
+      "target": "reservation_pricing",
+      "relationship": "provides"
+    },
+    {
+      "source": "ec2",
+      "target": "scalability",
+      "relationship": "supports"
+    },
+    {
+      "source": "ec2",
+      "target": "security",
+      "relationship": "secures"
+    },
+    {
+      "source": "ec2",
+      "target": "ami_images",
+      "relationship": "uses"
+    },
+    {
+      "source": "ec2",
+      "target": "elastic_ip",
+      "relationship": "utilizes"
+    },
+    {
+      "source": "ec2",
+      "target": "elastic_block_store",
+      "relationship": "manages"
+    },
+    {
+      "source": "vpc",
+      "target": "ecs",
+      "relationship": "requires"
+    },
+    {
+      "source": "vpc",
+      "target": "managing",
+      "relationship": "enables"
+    },
+    {
+      "source": "aws",
+      "target": "vpc",
+      "relationship": "manages"
+    },
+    {
+      "source": "ssl/tls",
+      "target": "https",
+      "relationship": "requires"
+    },
+    {
+      "source": "https",
+      "target": "ssl/tls",
+      "relationship": "uses"
+    },
+    {
+      "source": "oauth2",
+      "target": "authentication",
+      "relationship": "uses"
+    },
+    {
+      "source": "oauth2",
+      "target": "tokens",
+      "relationship": "manages"
+    },
+    {
+      "source": "oauth2",
+      "target": "imap protocol",
+      "relationship": "requires"
+    },
+    {
+      "source": "oauth2",
+      "target": "email access",
+      "relationship": "enables"
+    },
+    {
+      "source": "oauth2",
+      "target": "microsoft email",
+      "relationship": "secures"
+    },
+    {
+      "source": "oauth2",
+      "target": "2024",
+      "relationship": "mandatory_for"
     }
   ]
 }

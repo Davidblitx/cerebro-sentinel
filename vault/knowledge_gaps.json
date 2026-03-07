@@ -1,0 +1,22 @@
+[
+  {
+    "topic": "ssl tls",
+    "domain": "security"
+  },
+  {
+    "topic": "oauth2",
+    "domain": "security"
+  },
+  {
+    "topic": "jwt tokens",
+    "domain": "security"
+  },
+  {
+    "topic": "penetration testing",
+    "domain": "security"
+  },
+  {
+    "topic": "vulnerability scanning",
+    "domain": "security"
+  }
+]

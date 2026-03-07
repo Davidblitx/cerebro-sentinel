@@ -7,5 +7,68 @@
   },
   "https://kubernetes.io/docs/concepts/containers/": {
     "learned_at": "2026-03-06T10:29:41.551639"
+  },
+  "https://kubernetes.io/docs/concepts/workloads/": {
+    "learned_at": "2026-03-06T10:55:26.112598"
+  },
+  "https://docs.github.com/en/actions": {
+    "learned_at": "2026-03-06T10:58:38.481582"
+  },
+  "https://www.terraform.io/docs": {
+    "learned_at": "2026-03-06T10:59:39.773126"
+  },
+  "https://aws.amazon.com/ec2/faqs/": {
+    "learned_at": "2026-03-06T11:09:33.404914"
+  },
+  "https://aws.amazon.com/s3/faqs/": {
+    "learned_at": "2026-03-06T11:20:19.512874"
+  },
+  "https://aws.amazon.com/iam/faqs/": {
+    "learned_at": "2026-03-06T11:28:35.862706"
+  },
+  "https://aws.amazon.com/documentation-overview/s3/": {
+    "learned_at": "2026-03-06T11:53:41.849431"
+  },
+  "https://docs.aws.amazon.com/AmazonS3/latest/userguide/Reference.html": {
+    "learned_at": "2026-03-06T11:54:54.846663"
+  },
+  "https://docs.aws.amazon.com/AmazonS3/latest/userguide/GetStartedWithS3.html": {
+    "learned_at": "2026-03-06T12:02:18.688169"
+  },
+  "https://aws.amazon.com/ec2/": {
+    "learned_at": "2026-03-06T12:05:00.604321"
+  },
+  "https://aws.amazon.com/console/": {
+    "learned_at": "2026-03-06T12:06:16.731888"
+  },
+  "https://en.wikipedia.org/wiki/Amazon_Web_Services": {
+    "learned_at": "2026-03-06T12:13:33.351870"
+  },
+  "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html": {
+    "learned_at": "2026-03-06T12:19:02.617732"
+  },
+  "https://www.bing.com/aclick?ld=e80UU77JtVIWiRC43_1gxV9zVUCUxGaiBswmsUenj7VlcsIMgT8k2Q7AV9gi7JKT2vqhdWK6QexY8PtUUOUeIeSbsexuiavnTCDKRnbp6D3bEm_f6bsbkCZl_HmO_9wNUEUwFH7GFgoEus9GIQUZIOZOI2T5lH5DD3Fnn2mNMqaeCGmXqm4H9EcO0KF5bfk0x0WTJYtZsuaW8B7xzTJfUd8G0zdR8&u=aHR0cHMlM2ElMmYlMmZwaXhlbC5ldmVyZXN0dGVjaC5uZXQlMmY0NDIyJTJmY3ElM2Zldl9zaWQlM2QxMCUyNmV2X2xuJTNkbGVhcm4lMjUyMGF3cyUyNmV2X2x0eCUzZCUyNmV2X2x4JTNka3dkLTcxMTk0MjIzNDcxOTQyJTNhbG9jLTE0MjY1OSUyNmV2X2NyeCUzZDcxMTkzNjYxNDk4OTQ1JTI2ZXZfbXQlM2RwJTI2ZXZfZHZjJTNkYyUyNmV2X3BoeSUzZDE1MjYyOCUyNmV2X2xvYyUzZCUyNmV2X2N4JTNkNDg3NDQxODc0JTI2ZXZfYXglM2QxMTM5MDk1ODk0MDE4MDUwJTI2ZXZfZXglM2QlMjZldl9lZmlkJTNkYTgxOTdjZGM2MDMyMWU5ZDAxY2YxNTc2ZDczMDJjN2UlM2FHJTNhcyUyNnVybCUzZGh0dHBzJTI1M0ElMjUyRiUyNTJGYXdzLmFtYXpvbi5jb20lMjUyRnRyYWluaW5nJTI1MkYlMjUzRnRyayUyNTNEYzAyNmE3NmItNTVmOC00ODgyLTk2M2UtMGZkZjAwMzdlYWE1JTI1MjZzY19jaGFubmVsJTI1M0RwcyUyNTI2c19rd2NpZCUyNTNEQUwhNDQyMiExMCE3MTE5MzY2MTQ5ODk0NSEhISE3MTE5NDIyMzQ3MTk0MiEhNDg3NDQxODc0ITExMzkwOTU4OTQwMTgwNTAlMjUyNmVmX2lkJTI1M0RhODE5N2NkYzYwMzIxZTlkMDFjZjE1NzZkNzMwMmM3ZSUyNTNBRyUyNTNBcyUyNm1zY2xraWQlM2RhODE5N2NkYzYwMzIxZTlkMDFjZjE1NzZkNzMwMmM3ZQ&rlid=a8197cdc60321e9d01cf1576d7302c7e": {
+    "learned_at": "2026-03-06T12:20:30.577829"
+  },
+  "https://docs.aws.amazon.com/eks/latest/userguide/setting-up.html": {
+    "learned_at": "2026-03-06T12:22:15.971976"
+  },
+  "https://developers.cloudflare.com/ssl/": {
+    "learned_at": "2026-03-07T15:26:52.730416"
+  },
+  "https://en.wikipedia.org/wiki/Transport_Layer_Security": {
+    "learned_at": "2026-03-07T15:29:37.121409"
+  },
+  "https://www.ssl.com/article/what-is-ssl-tls-an-in-depth-guide/": {
+    "learned_at": "2026-03-07T15:32:02.004077"
+  },
+  "https://github.com/asheidan/oauth2-documentation/blob/master/Annotations.mdown": {
+    "learned_at": "2026-03-07T15:35:04.935332"
+  },
+  "https://dark.ss-mail.org/": {
+    "learned_at": "2026-03-07T15:39:00.483524"
+  },
+  "https://ktor.io/docs/server-jwt.html": {
+    "learned_at": "2026-03-07T15:43:10.270081"
   }
 }
