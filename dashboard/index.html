@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CEREBRO Sentinel</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0a0a0f;
+    color: #e0e0e0;
+    font-family: 'Courier New', monospace;
+    min-height: 100vh;
+  }
+  header {
+    background: linear-gradient(135deg, #0d1117, #1a1a2e);
+    border-bottom: 1px solid #00ff9030;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo { font-size: 24px; font-weight: bold; color: #00ff90; letter-spacing: 4px; }
+  .logo span { color: #ffffff; }
+  .status { font-size: 12px; color: #00ff90; }
+  .status::before { content: "● "; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 30px 40px;
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  .card {
+    background: #0d1117;
+    border: 1px solid #1e2d3d;
+    border-radius: 12px;
+    padding: 24px;
+    position: relative;
+    overflow: hidden;
+  }
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #00ff90, #0066ff);
+  }
+  .card-title {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #666;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .big-number {
+    font-size: 48px;
+    font-weight: bold;
+    color: #00ff90;
+    line-height: 1;
+  }
+  .big-label { font-size: 12px; color: #666; margin-top: 4px; }
+  .metric-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #1e2d3d;
+  }
+  .metric-row:last-child { border-bottom: none; }
+  .metric-label { font-size: 12px; color: #888; }
+  .metric-value { font-size: 14px; color: #00ff90; font-weight: bold; }
+  .bar-container {
+    background: #1e2d3d;
+    border-radius: 4px;
+    height: 6px;
+    margin-top: 4px;
+    overflow: hidden;
+  }
+  .bar {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.5s ease;
+  }
+  .bar-green { background: #00ff90; }
+  .bar-yellow { background: #ffcc00; }
+  .bar-red { background: #ff4444; }
+  .log-item {
+    font-size: 11px;
+    color: #888;
+    padding: 4px 0;
+    border-bottom: 1px solid #1a1a1a;
+    word-break: break-all;
+  }
+  .log-item:last-child { border-bottom: none; }
+  .gap-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    border-bottom: 1px solid #1a1a1a;
+    font-size: 12px;
+  }
+  .gap-topic { color: #fff; }
+  .gap-domain { color: #0066ff; font-size: 10px; }
+  .card-wide { grid-column: span 2; }
+  .node-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  .node-tag {
+    background: #1e2d3d;
+    border-radius: 20px;
+    padding: 3px 10px;
+    font-size: 10px;
+    color: #00ff90;
+    border: 1px solid #00ff9030;
+  }
+  .node-tag.security { border-color: #ff444430; color: #ff4444; }
+  .node-tag.cloud { border-color: #0066ff30; color: #4499ff; }
+  .node-tag.devops { border-color: #ffcc0030; color: #ffcc00; }
+  .refresh-time { font-size: 10px; color: #444; text-align: right; margin-top: 8px; }
+  .session-info { font-size: 12px; color: #888; line-height: 1.8; }
+  .session-info span { color: #00ff90; }
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <div class="logo">CEREBRO <span>SENTINEL</span></div>
+    <div style="font-size:11px;color:#444;margin-top:4px;">Sovereign Intelligence Dashboard</div>
+  </div>
+  <div>
+    <div class="status">ONLINE</div>
+    <div id="clock" style="font-size:11px;color:#444;margin-top:4px;"></div>
+  </div>
+</header>
+
+<div class="grid">
+
+  <!-- Brain Stats -->
+  <div class="card">
+    <div class="card-title">Brain Stats</div>
+    <div class="big-number" id="concepts">--</div>
+    <div class="big-label">Concepts Learned</div>
+    <div style="margin-top:20px;">
+      <div class="metric-row">
+        <span class="metric-label">Connections</span>
+        <span class="metric-value" id="connections">--</span>
+      </div>
+      <div class="metric-row">
+        <span class="metric-label">Knowledge Gaps</span>
+        <span class="metric-value" id="gaps-count">--</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Last Session -->
+  <div class="card">
+    <div class="card-title">Last Learning Session</div>
+    <div class="session-info" id="session-info">Loading...</div>
+  </div>
+
+  <!-- System Health -->
+  <div class="card">
+    <div class="card-title">System Health</div>
+    <div class="metric-row">
+      <span class="metric-label">CPU</span>
+      <span class="metric-value" id="cpu-val">--%</span>
+    </div>
+    <div class="bar-container"><div class="bar bar-green" id="cpu-bar" style="width:0%"></div></div>
+    <div style="margin-top:12px;">
+    <div class="metric-row">
+      <span class="metric-label">RAM</span>
+      <span class="metric-value" id="ram-val">--%</span>
+    </div>
+    <div class="bar-container"><div class="bar bar-yellow" id="ram-bar" style="width:0%"></div></div>
+    </div>
+    <div style="margin-top:12px;">
+    <div class="metric-row">
+      <span class="metric-label">Disk</span>
+      <span class="metric-value" id="disk-val">--%</span>
+    </div>
+    <div class="bar-container"><div class="bar bar-red" id="disk-bar" style="width:0%"></div></div>
+    </div>
+    <div style="margin-top:8px;font-size:11px;color:#444;" id="disk-free"></div>
+  </div>
+
+  <!-- Knowledge Gaps -->
+  <div class="card">
+    <div class="card-title">Learning Queue</div>
+    <div id="gaps-list">Loading...</div>
+  </div>
+
+  <!-- Knowledge Nodes -->
+  <div class="card card-wide">
+    <div class="card-title">Knowledge Graph — Concepts</div>
+    <div class="node-list" id="node-list">Loading...</div>
+  </div>
+
+  <!-- Alerts -->
+  <div class="card">
+    <div class="card-title">Sentinel Alerts</div>
+    <div id="alerts-list">Loading...</div>
+  </div>
+
+  <!-- Activity -->
+  <div class="card">
+    <div class="card-title">Recent Activity</div>
+    <div id="activity-list">Loading...</div>
+  </div>
+
+</div>
+
+<script>
+const API = 'http://localhost:8000';
+
+function getBarColor(val) {
+  if (val > 85) return 'bar-red';
+  if (val > 70) return 'bar-yellow';
+  return 'bar-green';
+}
+
+async function fetchStats() {
+  try {
+    const r = await fetch(`${API}/api/stats`);
+    const d = await r.json();
+    document.getElementById('concepts').textContent = d.brain.concepts;
+    document.getElementById('connections').textContent = d.brain.connections;
+    document.getElementById('gaps-count').textContent = d.gaps;
+    const s = d.last_session;
+    document.getElementById('session-info').innerHTML = `
+      <div>Time: <span>${s.time}</span></div>
+      <div>Topics: <span>${s.topics.join(', ') || 'none'}</span></div>
+      <div>New Concepts: <span>+${s.new_concepts}</span></div>
+      <div>New Connections: <span>+${s.new_connections}</span></div>
+    `;
+  } catch(e) {}
+}
+
+async function fetchSystem() {
+  try {
+    const r = await fetch(`${API}/api/system`);
+    const d = await r.json();
+    ['cpu','ram','disk'].forEach(k => {
+      const val = d[k];
+      document.getElementById(`${k}-val`).textContent = val + '%';
+      const bar = document.getElementById(`${k}-bar`);
+      bar.style.width = val + '%';
+      bar.className = `bar ${getBarColor(val)}`;
+    });
+    document.getElementById('disk-free').textContent = `${d.disk_free_gb} GB free`;
+  } catch(e) {}
+}
+
+async function fetchGraph() {
+  try {
+    const r = await fetch(`${API}/api/graph`);
+    const d = await r.json();
+    const container = document.getElementById('node-list');
+    container.innerHTML = d.nodes.map(n => {
+      const cat = n.category || 'general';
+      return `<span class="node-tag ${cat}">${n.id}</span>`;
+    }).join('');
+  } catch(e) {}
+}
+
+async function fetchGaps() {
+  try {
+    const r = await fetch(`${API}/api/gaps`);
+    const d = await r.json();
+    document.getElementById('gaps-list').innerHTML = d.gaps.map(g =>
+      `<div class="gap-item">
+        <span class="gap-topic">${g.topic}</span>
+        <span class="gap-domain">${g.domain}</span>
+      </div>`
+    ).join('') || '<div class="log-item">No gaps detected</div>';
+  } catch(e) {}
+}
+
+async function fetchAlerts() {
+  try {
+    const r = await fetch(`${API}/api/alerts`);
+    const d = await r.json();
+    document.getElementById('alerts-list').innerHTML =
+      d.alerts.slice(-8).reverse().map(a =>
+        `<div class="log-item">${a}</div>`
+      ).join('') || '<div class="log-item">No alerts</div>';
+  } catch(e) {}
+}
+
+async function fetchActivity() {
+  try {
+    const r = await fetch(`${API}/api/activity`);
+    const d = await r.json();
+    document.getElementById('activity-list').innerHTML =
+      d.activity.slice(-8).reverse().map(a =>
+        `<div class="log-item">${a}</div>`
+      ).join('') || '<div class="log-item">No activity</div>';
+  } catch(e) {}
+}
+
+function updateClock() {
+  document.getElementById('clock').textContent =
+    new Date().toLocaleString('en-GB');
+}
+
+async function refresh() {
+  await Promise.all([
+    fetchStats(), fetchSystem(), fetchGraph(),
+    fetchGaps(), fetchAlerts(), fetchActivity()
+  ]);
+}
+
+refresh();
+setInterval(refresh, 10000);
+setInterval(updateClock, 1000);
+updateClock();
+</script>
+</body>
+</html>
