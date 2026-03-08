@@ -1,4 +1,3 @@
-```python
 import hashlib
 import os
 
@@ -16,4 +15,3 @@ def hash_password_with_salt(password, salt):
 
 def verify_password_with_salt(provided_password, stored_password, salt):
     return stored_password == hash_password_with_salt(provided_password, salt)
-```
