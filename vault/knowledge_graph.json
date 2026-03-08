@@ -399,6 +399,56 @@
       "id": "2024",
       "category": "general",
       "description": ""
+    },
+    {
+      "id": "penetration testing (security)",
+      "category": "security",
+      "description": ""
+    },
+    {
+      "id": "penetration testing",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "security measures",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "security testing methodologies",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "computer security",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "security testing",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "vulnerability scanning (security)",
+      "category": "security",
+      "description": ""
+    },
+    {
+      "id": "vulnerability scans",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "vulnerability scanning",
+      "category": "general",
+      "description": ""
+    },
+    {
+      "id": "vulnerabilities",
+      "category": "general",
+      "description": ""
     }
   ],
   "edges": [
@@ -733,6 +783,16 @@
       "relationship": "ensures"
     },
     {
+      "source": "security",
+      "target": "security measures",
+      "relationship": "implements"
+    },
+    {
+      "source": "security",
+      "target": "security testing",
+      "relationship": "verifies"
+    },
+    {
       "source": "encryption",
       "target": "data",
       "relationship": "protects"
@@ -841,6 +901,46 @@
       "source": "oauth2",
       "target": "2024",
       "relationship": "mandatory_for"
+    },
+    {
+      "source": "penetration testing",
+      "target": "security",
+      "relationship": "secures"
+    },
+    {
+      "source": "penetration testing",
+      "target": "security measures",
+      "relationship": "evaluates"
+    },
+    {
+      "source": "penetration testing",
+      "target": "security testing methodologies",
+      "relationship": "employs"
+    },
+    {
+      "source": "penetration testing",
+      "target": "computer security",
+      "relationship": "tests"
+    },
+    {
+      "source": "vulnerability scans",
+      "target": "vulnerability scanning",
+      "relationship": "uses"
+    },
+    {
+      "source": "vulnerability scanning",
+      "target": "security",
+      "relationship": "secures"
+    },
+    {
+      "source": "vulnerabilities",
+      "target": "vulnerability scans",
+      "relationship": "identified_by"
+    },
+    {
+      "source": "vulnerabilities",
+      "target": "security",
+      "relationship": "exposed_by"
     }
   ]
 }

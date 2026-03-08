@@ -1,22 +1,22 @@
 [
   {
-    "topic": "ssl tls",
+    "topic": "penetration testing (security)",
     "domain": "security"
   },
   {
-    "topic": "oauth2",
+    "topic": "vulnerability scanning (security)",
     "domain": "security"
   },
   {
-    "topic": "jwt tokens",
+    "topic": "firewall (security)",
     "domain": "security"
   },
   {
-    "topic": "penetration testing",
-    "domain": "security"
+    "topic": "cloud architecture (cloud)",
+    "domain": "cloud"
   },
   {
-    "topic": "vulnerability scanning",
-    "domain": "security"
+    "topic": "terraform (devops)",
+    "domain": "devops"
   }
 ]

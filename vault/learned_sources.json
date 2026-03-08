@@ -70,5 +70,20 @@
   },
   "https://ktor.io/docs/server-jwt.html": {
     "learned_at": "2026-03-07T15:43:10.270081"
+  },
+  "https://pentest-standard.readthedocs.io/": {
+    "learned_at": "2026-03-07T23:46:21.567385"
+  },
+  "https://en.wikipedia.org/wiki/Penetration_test": {
+    "learned_at": "2026-03-07T23:48:13.567297"
+  },
+  "https://www.tutorialspoint.com/penetration_testing/index.htm": {
+    "learned_at": "2026-03-07T23:49:18.210303"
+  },
+  "https://geekflare.com/cybersecurity/best-website-security-scanner/": {
+    "learned_at": "2026-03-07T23:54:01.037968"
+  },
+  "https://nmap.org/download": {
+    "learned_at": "2026-03-07T23:56:20.232097"
   }
 }
