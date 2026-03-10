@@ -16,7 +16,7 @@ GRAPH_FILE = "/home/david/cerebro-sentinel/vault/knowledge_graph.json"
 ALERTS_LOG = "/home/david/cerebro-sentinel/logs/alerts.log"
 LAST_STUDY_FILE = "/home/david/cerebro-sentinel/vault/last_study.json"
 
-llm = ChatOllama(model="qwen2.5-coder:7b", base_url=OLLAMA_URL, timeout=120)
+llm = ChatOllama(model="llama3.1:8b", base_url=OLLAMA_URL, timeout=120)
 
 # Alert thresholds
 CPU_THRESHOLD = 85

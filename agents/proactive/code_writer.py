@@ -12,7 +12,7 @@ OLLAMA_URL = "http://172.26.112.1:11434"
 WORKSPACE  = "/home/david/cerebro-sentinel/workspace"
 WRITE_LOG  = "/home/david/cerebro-sentinel/logs/code_written.log"
 
-llm = ChatOllama(model="qwen2.5-coder:7b", base_url=OLLAMA_URL, timeout=180)
+llm = ChatOllama(model="llama3.1:8b", base_url=OLLAMA_URL, timeout=180)
 
 def log_write(filename: str, description: str):
     os.makedirs(os.path.dirname(WRITE_LOG), exist_ok=True)

@@ -7,7 +7,7 @@ from langchain_ollama import ChatOllama
 from langchain_core.messages import HumanMessage, SystemMessage
 
 OLLAMA_URL = "http://172.26.112.1:11434"
-llm = ChatOllama(model="qwen2.5-coder:7b", base_url=OLLAMA_URL)
+llm = ChatOllama(model="llama3.1:8b", base_url=OLLAMA_URL)
 
 def learn(source: str):
     """Auto-detect source type and learn from it"""

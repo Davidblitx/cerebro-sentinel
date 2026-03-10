@@ -16,7 +16,7 @@ WORKSPACE = "/home/david/cerebro-sentinel/workspace"
 CEREBRO_ROOT = "/home/david/cerebro-sentinel"
 REVIEW_LOG = "/home/david/cerebro-sentinel/logs/git_reviews.log"
 
-llm = ChatOllama(model="qwen2.5-coder:7b", base_url=OLLAMA_URL, timeout=120)
+llm = ChatOllama(model="llama3.1:8b", base_url=OLLAMA_URL, timeout=120)
 
 WATCHED_EXTENSIONS = {'.py', '.js', '.ts', '.html', '.css', '.sh', '.yml', '.yaml', '.json', '.md'}
 
