@@ -6,7 +6,7 @@ from langchain_core.messages import HumanMessage, SystemMessage
 
 CEREBRO_LOG = "/home/david/cerebro-sentinel/logs/activity.log"
 WATCH_PATH = "/home/david/cerebro-sentinel/workspace"
-OLLAMA_URL = "http://172.26.112.1:11434"
+OLLAMA_URL = "http://localhost:11434"
 
 CEREBRO_IDENTITY = """
 You are CEREBRO Sentinel v0.1, a proactive sovereign AI assistant.

@@ -9,7 +9,7 @@ from langchain_ollama import ChatOllama
 from langchain_core.messages import HumanMessage, SystemMessage
 from memory_engine import init_memory, recall_formatted
 
-OLLAMA_URL = "http://172.26.112.1:11434"
+OLLAMA_URL = "http://localhost:11434"
 REPORT_FILE = "/home/david/cerebro-sentinel/vault/learning_report.json"
 GRAPH_FILE = "/home/david/cerebro-sentinel/vault/knowledge_graph.json"
 GAPS_FILE = "/home/david/cerebro-sentinel/vault/knowledge_gaps.json"

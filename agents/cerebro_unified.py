@@ -6,7 +6,7 @@ from langchain_ollama import ChatOllama
 from langchain_core.messages import HumanMessage, SystemMessage
 from memory_engine import init_memory, remember, recall_formatted
 
-OLLAMA_URL = "http://172.26.112.1:11434"
+OLLAMA_URL = "http://localhost:11434"
 CEREBRO_LOG = "/home/david/cerebro-sentinel/logs/unified.log"
 WATCH_PATH = "/home/david/cerebro-sentinel/workspace"
 

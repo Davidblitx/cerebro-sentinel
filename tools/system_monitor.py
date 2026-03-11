@@ -3,7 +3,7 @@ import time
 from langchain_ollama import ChatOllama
 from langchain_core.messages import HumanMessage, SystemMessage
 
-OLLAMA_URL = "http://172.26.112.1:11434"
+OLLAMA_URL = "http://localhost:11434"
 CEREBRO_LOG = "/home/david/cerebro-sentinel/logs/system.log"
 
 CEREBRO_IDENTITY = """

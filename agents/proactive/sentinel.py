@@ -10,7 +10,7 @@ sys.path.append('/home/david/cerebro-sentinel/vault')
 from langchain_ollama import ChatOllama
 from langchain_core.messages import HumanMessage, SystemMessage
 
-OLLAMA_URL = "http://172.26.112.1:11434"
+OLLAMA_URL = "http://localhost:11434"
 GAPS_FILE = "/home/david/cerebro-sentinel/vault/knowledge_gaps.json"
 GRAPH_FILE = "/home/david/cerebro-sentinel/vault/knowledge_graph.json"
 ALERTS_LOG = "/home/david/cerebro-sentinel/logs/alerts.log"

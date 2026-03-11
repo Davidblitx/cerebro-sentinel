@@ -10,7 +10,7 @@ and acts. You are the foundation of something much larger.
 """
 
 # Connect to local Ollama brain
-llm = ChatOllama(model="qwen2.5-coder:7b", base_url="http://172.26.112.1:11434")
+llm = ChatOllama(model="qwen2.5-coder:7b", base_url="http://localhost:11434")
 
 def ask_cerebro(user_input):
     messages = [

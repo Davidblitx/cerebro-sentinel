@@ -15,7 +15,7 @@ from web_searcher import learn_from_search
 from knowledge_graph import CerebroKnowledgeGraph
 
 REPORT_FILE = "/home/david/cerebro-sentinel/vault/learning_report.json"
-OLLAMA_URL = "http://172.26.112.1:11434"
+OLLAMA_URL = "http://localhost:11434"
 
 def run_learning_cycle():
     """One full autonomous learning cycle"""

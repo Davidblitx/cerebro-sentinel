@@ -35,7 +35,7 @@ def mark_as_learned(url: str):
         json.dump(learned, f, indent=2)
 
 
-OLLAMA_URL = "http://172.26.112.1:11434"
+OLLAMA_URL = "http://localhost:11434"
 llm = ChatOllama(model="qwen2.5-coder:7b", base_url=OLLAMA_URL)
 
 def extract_web_text(url: str) -> str:

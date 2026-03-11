@@ -7,7 +7,7 @@ from ddgs import DDGS
 from langchain_ollama import ChatOllama
 from langchain_core.messages import HumanMessage, SystemMessage
 
-OLLAMA_URL = "http://172.26.112.1:11434"
+OLLAMA_URL = "http://localhost:11434"
 llm = ChatOllama(model="qwen2.5-coder:7b", base_url=OLLAMA_URL, timeout=120)
 
 def search_best_sources(topic: str) -> list:

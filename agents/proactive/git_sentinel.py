@@ -11,7 +11,7 @@ from langchain_core.messages import HumanMessage, SystemMessage
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 
-OLLAMA_URL = "http://172.26.112.1:11434"
+OLLAMA_URL = "http://localhost:11434"
 WORKSPACE = "/home/david/cerebro-sentinel/workspace"
 CEREBRO_ROOT = "/home/david/cerebro-sentinel"
 REVIEW_LOG = "/home/david/cerebro-sentinel/logs/git_reviews.log"
