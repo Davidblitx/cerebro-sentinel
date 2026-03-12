@@ -1,22 +1,25 @@
-[
-  {
-    "topic": "penetration testing (security)",
-    "domain": "security"
-  },
-  {
-    "topic": "vulnerability scanning (security)",
-    "domain": "security"
-  },
-  {
-    "topic": "firewall (security)",
-    "domain": "security"
-  },
-  {
-    "topic": "cloud architecture (cloud)",
-    "domain": "cloud"
-  },
-  {
-    "topic": "terraform (devops)",
-    "domain": "devops"
-  }
-]
+{
+  "gaps": [
+    {
+      "topic": "penetration testing (security)",
+      "domain": "security"
+    },
+    {
+      "topic": "vulnerability scanning (security)",
+      "domain": "security"
+    },
+    {
+      "topic": "firewall (security)",
+      "domain": "security"
+    },
+    {
+      "topic": "cloud architecture (cloud)",
+      "domain": "cloud"
+    },
+    {
+      "topic": "terraform (devops)",
+      "domain": "devops"
+    }
+  ],
+  "last_improvement_analysis": "2026-03-12 11:27"
+}
