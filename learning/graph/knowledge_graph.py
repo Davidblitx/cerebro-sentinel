@@ -12,7 +12,7 @@ OLLAMA_URL = "http://localhost:11434"
 GRAPH_FILE = "/home/david/cerebro-sentinel/vault/knowledge_graph.json"
 
 llm = ChatOllama(
-    model="qwen2.5-coder:7b",
+    model="llama3.1:8b",
     base_url=OLLAMA_URL,
     timeout=120
 )

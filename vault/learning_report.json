@@ -1,24 +1,12 @@
-[
-  {
-    "started_at": "2026-03-07T15:25:40.026236",
-    "topics_learned": [
-      "ssl tls",
-      "oauth2"
-    ],
-    "topics_failed": [],
-    "new_concepts": 9,
-    "new_connections": 8,
-    "completed_at": "2026-03-07T15:45:01.485947"
-  },
-  {
-    "started_at": "2026-03-07T23:44:50.527693",
-    "topics_learned": [
-      "penetration testing (security)",
-      "vulnerability scanning (security)"
-    ],
-    "topics_failed": [],
-    "new_concepts": 10,
-    "new_connections": 10,
-    "completed_at": "2026-03-07T23:58:04.810642"
-  }
-]
+{
+  "started_at": "2026-03-13T08:07:40.328330",
+  "mode": "goal_directed",
+  "topics_learned": [],
+  "topics_failed": [
+    "Cloud Security Architecture",
+    "Terraform and CloudFormation Automation"
+  ],
+  "new_concepts": 0,
+  "new_connections": 0,
+  "completed_at": "2026-03-13T09:07:27.478937"
+}

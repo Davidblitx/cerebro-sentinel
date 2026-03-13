@@ -88,5 +88,20 @@
   },
   "https://en.wikipedia.org/wiki/Electricity_sector_in_Nigeria": {
     "learned_at": "2026-03-10T10:20:44.845409"
+  },
+  "https://docs.cloud.google.com/docs/security": {
+    "learned_at": "2026-03-13T08:17:35.388586"
+  },
+  "https://cloudsecurityalliance.org/research/guidance": {
+    "learned_at": "2026-03-13T08:30:32.639224"
+  },
+  "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html": {
+    "learned_at": "2026-03-13T08:40:08.039071"
+  },
+  "https://github.com/AmeerHossam/Terraform-VS.-CloudFormation": {
+    "learned_at": "2026-03-13T08:51:49.719980"
+  },
+  "https://bthek1.github.io/WEB_doc/terraform.html": {
+    "learned_at": "2026-03-13T09:05:57.398058"
   }
 }

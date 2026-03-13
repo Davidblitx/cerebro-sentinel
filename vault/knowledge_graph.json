@@ -102,7 +102,7 @@
     },
     {
       "id": "iam",
-      "category": "general",
+      "category": "cloud",
       "description": ""
     },
     {
@@ -407,7 +407,7 @@
     },
     {
       "id": "penetration testing",
-      "category": "general",
+      "category": "cloud",
       "description": ""
     },
     {
@@ -442,12 +442,62 @@
     },
     {
       "id": "vulnerability scanning",
-      "category": "general",
+      "category": "cloud",
       "description": ""
     },
     {
       "id": "vulnerabilities",
       "category": "general",
+      "description": ""
+    },
+    {
+      "id": "cloud security",
+      "category": "cloud",
+      "description": ""
+    },
+    {
+      "id": "terraform",
+      "category": "devops",
+      "description": ""
+    },
+    {
+      "id": "cloudformation",
+      "category": "devops",
+      "description": ""
+    },
+    {
+      "id": "zero trust",
+      "category": "security",
+      "description": ""
+    },
+    {
+      "id": "devsecops",
+      "category": "security",
+      "description": ""
+    },
+    {
+      "id": "firewall",
+      "category": "cloud",
+      "description": ""
+    },
+    {
+      "id": "cloud architecture",
+      "category": "cloud",
+      "description": ""
+    },
+    {
+      "id": "cloud security architecture",
+      "category": "cloud",
+      "description": ""
+    },
+    {
+      "id": "cloud armor",
+      "category": "security",
+      "description": ""
+    },
+    {
+      "id": "security command center",
+      "category": "cloud",
       "description": ""
     }
   ],

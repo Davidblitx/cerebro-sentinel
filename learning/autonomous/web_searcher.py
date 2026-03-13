@@ -8,7 +8,7 @@ from langchain_ollama import ChatOllama
 from langchain_core.messages import HumanMessage, SystemMessage
 
 OLLAMA_URL = "http://localhost:11434"
-llm = ChatOllama(model="qwen2.5-coder:7b", base_url=OLLAMA_URL, timeout=120)
+llm = ChatOllama(model="llama3.1:8b", base_url=OLLAMA_URL, timeout=120)
 
 def search_best_sources(topic: str) -> list:
     """Search for the best learning sources for a topic"""

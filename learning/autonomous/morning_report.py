@@ -42,6 +42,8 @@ def get_next_topics() -> list:
         return []
     with open(GAPS_FILE, "r") as f:
         gaps = json.load(f)
+    if isinstance(gaps, dict):
+        gaps = gaps.get("gaps", [])
     return gaps[:3]
 
 def generate_briefing(session: dict, stats: dict, next_topics: list) -> str:
@@ -89,6 +91,8 @@ Give David a sharp, intelligent briefing.
     response = llm.invoke(messages)
     return response.content
 
+import sys
+sys.path.append("/home/david/cerebro-sentinel")
 def morning_report():
     """Generate and display the morning report"""
     print("\n" + "=" * 55)
@@ -102,9 +106,17 @@ def morning_report():
     stats = get_graph_stats()
     next_topics = get_next_topics()
 
+    try:
+        from agents.self_model import run_self_model
+        self_model = run_self_model(verbose=False)
+        portrait = self_model.get("portrait", {})
+    except Exception as e:
+        portrait = {}
     briefing = generate_briefing(session, stats, next_topics)
 
     print(briefing)
+    if portrait:
+        print(f"\n[CEREBRO SELF] {portrait.get('message_to_david', '')}")
 
     print("\n" + "-" * 55)
     print(f"  Brain Stats: {stats['nodes']} concepts | {stats['edges']} connections")

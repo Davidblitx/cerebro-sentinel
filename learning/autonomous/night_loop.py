@@ -134,3 +134,136 @@ def start_night_loop():
 
 if __name__ == "__main__":
     start_night_loop()
+
+def get_goal_directed_topics() -> list:
+    """Read self model goals and return prioritized learning topics"""
+    self_model_file = "/home/david/cerebro-sentinel/vault/self_model.json"
+    improvement_file = "/home/david/cerebro-sentinel/vault/improvement_plan.json"
+
+    goal_topics = []
+
+    # Load self model goals
+    if os.path.exists(self_model_file):
+        with open(self_model_file, "r") as f:
+            self_model = json.load(f)
+        goals = self_model.get("goals", [])
+        for goal in goals:
+            topic = goal.get("target", "")
+            priority = goal.get("priority", "medium")
+            domain = goal.get("domain", "general")
+            if topic:
+                goal_topics.append({
+                    "topic": topic,
+                    "domain": domain,
+                    "priority": priority,
+                    "source": "self_model_goal",
+                    "purpose": goal.get("purpose", "")
+                })
+
+    # Load improvement plan priorities
+    if os.path.exists(improvement_file):
+        with open(improvement_file, "r") as f:
+            improvement = json.load(f)
+        plan = improvement.get("plan", {})
+        for key in ["priority_1", "priority_2", "priority_3"]:
+            item = plan.get(key, {})
+            topic = item.get("topic", "")
+            if topic:
+                goal_topics.append({
+                    "topic": topic,
+                    "domain": "improvement",
+                    "priority": "high",
+                    "source": "improvement_plan",
+                    "purpose": item.get("reason", "")
+                })
+
+    # Sort by priority
+    priority_order = {"critical": 0, "high": 1, "medium": 2, "low": 3}
+    goal_topics.sort(key=lambda x: priority_order.get(
+        x.get("priority", "medium").lower(), 2))
+
+    return goal_topics[:3]
+
+def run_goal_directed_cycle():
+    """Learning cycle driven by CEREBRO's self model goals"""
+    print("\n" + "=" * 55)
+    print(f"  CEREBRO — Goal Directed Learning Cycle")
+    print(f"  {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    print("=" * 55)
+
+    init_memory()
+
+    # Get goal directed topics
+    print("\n[CEREBRO NIGHT] Reading self model goals...")
+    goal_topics = get_goal_directed_topics()
+
+    if goal_topics:
+        print(f"[CEREBRO NIGHT] Goal directed topics:")
+        for i, t in enumerate(goal_topics, 1):
+            print(f"  {i}. {t['topic']} [{t['priority'].upper()}]")
+            if t.get('purpose'):
+                print(f"     Purpose: {t['purpose'][:80]}...")
+    else:
+        print("[CEREBRO NIGHT] No goals found — falling back to gap detection")
+        run_learning_cycle()
+        return
+
+    session_log = {
+        "started_at": datetime.datetime.now().isoformat(),
+        "mode": "goal_directed",
+        "topics_learned": [],
+        "topics_failed": [],
+        "new_concepts": 0,
+        "new_connections": 0
+    }
+
+    graph = CerebroKnowledgeGraph()
+    concepts_before = graph.graph.number_of_nodes()
+
+    # Learn top 2 goal topics
+    for item in goal_topics[:2]:
+        topic = item["topic"]
+        print(f"\n[CEREBRO NIGHT] Learning: {topic}")
+        print(f"[CEREBRO NIGHT] Purpose: {item.get('purpose', 'N/A')[:80]}")
+
+        try:
+            result = learn_from_search(topic)
+            if result:
+                session_log["topics_learned"].append(topic)
+                print(f"[CEREBRO NIGHT] ✅ {topic} — learned successfully")
+            else:
+                session_log["topics_failed"].append(topic)
+                print(f"[CEREBRO NIGHT] ❌ {topic} — failed")
+        except Exception as e:
+            session_log["topics_failed"].append(topic)
+            print(f"[CEREBRO NIGHT] ❌ {topic} — error: {str(e)[:50]}")
+
+        print("[CEREBRO NIGHT] Cooling down...")
+        time.sleep(90)
+
+    # Calculate what was learned
+    graph2 = CerebroKnowledgeGraph()
+    concepts_after = graph2.graph.number_of_nodes()
+    session_log["new_concepts"] = concepts_after - concepts_before
+    session_log["new_connections"] = (
+        graph2.graph.number_of_edges() -
+        graph.graph.number_of_edges())
+    session_log["completed_at"] = datetime.datetime.now().isoformat()
+
+    # Save report
+    with open(REPORT_FILE, "w") as f:
+        json.dump(session_log, f, indent=2)
+
+    # Update self model after learning
+    try:
+        sys.path.append('/home/david/cerebro-sentinel/agents')
+        from self_model import run_self_model
+        run_self_model(verbose=False)
+        print("\n[CEREBRO NIGHT] Self model updated. ✅")
+    except Exception as e:
+        print(f"\n[CEREBRO NIGHT] Self model update skipped: {e}")
+
+    print(f"\n[CEREBRO NIGHT] Goal directed cycle complete.")
+    print(f"[CEREBRO NIGHT] Learned: {len(session_log['topics_learned'])} topics")
+    print(f"[CEREBRO NIGHT] New concepts: {session_log['new_concepts']}")
+    print("=" * 55)
