@@ -22,7 +22,9 @@ def get_last_session() -> dict:
         return None
     with open(REPORT_FILE, "r") as f:
         reports = json.load(f)
-    return reports[-1] if reports else None
+    if isinstance(reports, list):
+        return reports[-1] if reports else None
+    return reports if reports else None
 
 def get_graph_stats() -> dict:
     """Get current knowledge graph statistics"""
