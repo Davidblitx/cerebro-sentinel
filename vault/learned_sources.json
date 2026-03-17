@@ -118,5 +118,59 @@
   },
   "https://en.wikipedia.org/wiki/Kubernetes": {
     "learned_at": "2026-03-14T02:42:13.432038"
+  },
+  "https://aws.amazon.com/security/": {
+    "learned_at": "2026-03-15T02:11:32.149838"
+  },
+  "https://aws.amazon.com/training/learn-about/security/": {
+    "learned_at": "2026-03-15T02:17:33.316825"
+  },
+  "https://www.amazonaws.cn/en/": {
+    "learned_at": "2026-03-15T02:23:17.747584"
+  },
+  "https://docs.aws.amazon.com/devopsagent/latest/userguide/getting-started-with-aws-devops-agent-getting-started-with-aws-devops-agent-using-terraform.html": {
+    "learned_at": "2026-03-15T02:37:21.925247"
+  },
+  "https://controlmonkey.io/resource/devops-terraform-aws/": {
+    "learned_at": "2026-03-15T02:50:05.279771"
+  },
+  "https://www.udemy.com/course/devops-deployment-automation-terraform-aws-docker/": {
+    "learned_at": "2026-03-15T02:51:06.344065"
+  },
+  "https://www.gov.uk/service-manual/technology/vulnerability-and-penetration-testing": {
+    "learned_at": "2026-03-16T02:14:51.058677"
+  },
+  "https://www.ncsc.gov.uk/guidance/penetration-testing": {
+    "learned_at": "2026-03-16T02:26:11.476376"
+  },
+  "https://csrc.nist.gov/pubs/sp/800/115/final": {
+    "learned_at": "2026-03-16T02:31:33.900060"
+  },
+  "https://docs.cloud.google.com/architecture/blueprints/security-foundations/networking": {
+    "learned_at": "2026-03-16T02:44:00.161260"
+  },
+  "https://cloud.google.com/architecture/fundamentals": {
+    "learned_at": "2026-03-16T02:46:33.000856"
+  },
+  "https://learn.microsoft.com/en-us/azure/networking/fundamentals/": {
+    "learned_at": "2026-03-16T02:50:24.943316"
+  },
+  "https://learn.microsoft.com/en-us/docs/": {
+    "learned_at": "2026-03-17T02:04:46.199780"
+  },
+  "https://www.wattlecorp.com/cloud-security-frameworks/": {
+    "learned_at": "2026-03-17T02:17:07.104942"
+  },
+  "https://www.crowdstrike.com/en-us/cybersecurity-101/cloud-security/cloud-security-frameworks/": {
+    "learned_at": "2026-03-17T02:28:05.725526"
+  },
+  "https://www.bing.com/aclick?ld=e8tt5AKp-CmLtr23jgcCNmuzVUCUx4JVbY3JzJuVkj4JY34uvzWrwfSlbVcuwpuDUF5w6RXd82CZjrAWjq-87VhHCB9NrOegiJcb9hQWLJ9YBZ2FoWAVetl3klx50lyvVSQeTfToeAMeKlZxiRSUjbsstT3Lm6-YHg4GRJ6ByprkSNR4liS3FnXFz60SsT01dAvzHxRQ&u=aHR0cHMlM2ElMmYlMmZ3d3cuc3lzZGlnLmNvbSUyZnMtMjAyNS1nYXJ0bmVyLW1hcmtldC1ndWlkZS1mb3ItY25hcHAlM2Z1dG1fc291cmNlJTNkYmluZyUyNnV0bV9tZWRpdW0lM2RjcGMlMjZ1dG1fY2FtcGFpZ24lM2Q2MDQzNTcyMzElMjZhZGdyb3VwaWQlM2QxMzM5MjA3NjA0Mjc2MDU2JTI2dXRtX2NvbnRlbnQlM2QlMjZ1dG1fdGVybSUzZGNsb3VkJTI1MjBuYXRpdmUlMjUyMHNlY3VyaXR5JTI2dXRtX3Bvc2l0aW9uJTNkJTI2dXRtX2RldmljZSUzZGMlMjZ1dG1fdHlwZSUzZHAlMjZ1dG1fZ2VvJTNkNDE0NzElMjZtc2Nsa2lkJTNkMjdhNmM2M2RiYWEyMTIzMmI1YTVhZjg1MDYzMmJjMTI&rlid=27a6c63dbaa21232b5a5af850632bc12": {
+    "learned_at": "2026-03-17T02:32:49.188110"
+  },
+  "https://www.bing.com/aclick?ld=e8vOBwUZozhIImP1Q3tEesojVUCUzFGC5zoJwtwfO2O0pqigTKS8yaFjmgMoX0kPIc4glQd5Vivm9v8z4Y-VDwz3LuqSHxIFQmos6DdsKM75Dn7DG19oM8ZU1j_Y8JWnWi0Hy3f7Cdw-VBxraiUffu3ZzwxGBrkFXgBwxctCVsBErOJR2XEKcmGp9OtHJysqKFZTHB6g&u=aHR0cHMlM2ElMmYlMmZpc292YWxlbnQuY29tJTJmZmVhdHVyZXMlMmZ6ZXJvLXRydXN0LXNlY3VyaXR5JTJmJTNmdXRtX3NvdXJjZSUzZGJpbmclMjZ1dG1fbWVkaXVtJTNkY3BjJTI2dXRtX2NhbXBhaWduJTNkU2VhcmNoJTI1MjAtJTI1MjBOb24tQnJhbmRlZCUyNTIwLSUyNTIwRU1FQSUyNnV0bV90ZXJtJTNkQ2xvdWQtbmF0aXZlJTI1MjBzZWN1cml0eSUyNTIwc29sdXRpb25zJTI2dXRtX2NvbnRlbnQlM2Q4MDMzMzI2MTg5MjIzMV9DbG91ZC1OYXRpdmUlMjUyMFNlY3VyaXR5JTI2dXRtX3Rlcm0lM2RDbG91ZC1uYXRpdmUlMjUyMHNlY3VyaXR5JTI1MjBzb2x1dGlvbnMlMjZ1dG1fY2FtcGFpZ24lM2Q2MDQ5MDAzNTElMjZ1dG1fc291cmNlJTNkYmluZyUyNnV0bV9tZWRpdW0lM2RjcGMlMjZ1dG1fY29udGVudCUzZCUyNmhzYV9hY2MlM2Q5NzIxNzY5MTA1JTI2aHNhX2NhbSUzZDIxOTI1Njg5ODEzJTI2aHNhX2dycCUzZDEyODUzMzA0MzUwNjc1NDMlMjZoc2FfYWQlM2QlMjZoc2Ffc3JjJTNkbyUyNmhzYV90Z3QlM2Rrd2QtODAzMzM0NDg1NzkzMzQlM2Fsb2MtMTg4JTI2aHNhX2t3JTNkQ2xvdWQtbmF0aXZlJTI1MjBzZWN1cml0eSUyNTIwc29sdXRpb25zJTI2aHNhX210JTNkcCUyNmhzYV9uZXQlM2RhZHdvcmRzJTI2aHNhX3ZlciUzZDMlMjZtc2Nsa2lkJTNkODNlN2QyMmM3MjBjMWM4ODBiNmJiYjk0Y2U5YzNmYTY&rlid=83e7d22c720c1c880b6bbb94ce9c3fa6": {
+    "learned_at": "2026-03-17T02:34:59.738349"
+  },
+  "https://www.bing.com/aclick?ld=e8tibUo24gugot1h4faZaKdTVUCUw4UQpxx8WtNrt1gLdGZYFzDHcWl1S2usOaO9I-A-PCthSZONXmk02rQse14r8fiCimlLl-dau7MEMP1t9tiDQ16pLco6FbH9HwSWnHh6rTS_oJ0tzVU5p4ToDtRFUMOCGh5StlMCljXtORlE5NDTjX_0AcGJ3Wwhc5iYHWCYHmGg&u=aHR0cHMlM2ElMmYlMmZ3d3cuZ2VuZXRlYy5jb20lMmZwcm9kdWN0cyUyZnVuaWZpZWQtc2VjdXJpdHklMmZ2c2FhcyUzZnV0bV9zb3VyY2UlM2RiaW5nJTI2dXRtX21lZGl1bSUzZHBhaWQlMjZ1dG1fdGVybSUzZG01Yi11a2klMjZ1dG1fY29udGVudCUzZGVuJTI2dXRtX2NhbXBhaWduJTNkYWx3LWVtZWEtZW4tb21uaWNhc3QlMjZ1dG1faWQlM2Q2ODg5Mzc4OTgtMTE4MDg3NzU5NDMyODA3Mi1jbG91ZC1uYXRpdmUlMjUyMHNlY3VyaXR5JTI1MjBwbGF0Zm9ybSUyNm1zY2xraWQlM2Q2OWQ0NDBjNzJjYTYxMmFlZWRiOTI5N2Y5MDM2ZDU1NQ&rlid=69d440c72ca612aeedb9297f9036d555": {
+    "learned_at": "2026-03-17T02:36:41.408326"
   }
 }

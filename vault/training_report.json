@@ -1,0 +1,13 @@
+{
+  "generated": "2026-03-14 13:21:07",
+  "total_samples": 77,
+  "breakdown": {
+    "identity": 7,
+    "graph_qa": 30,
+    "reasoning": 0,
+    "mind": 1,
+    "memory_qa": 39
+  },
+  "output_file": "/home/david/cerebro-sentinel/vault/training_data.jsonl",
+  "ready_for_finetuning": false
+}
