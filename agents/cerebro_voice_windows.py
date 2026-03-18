@@ -3,7 +3,7 @@ import pyttsx3
 import requests
 
 OLLAMA_URL = "http://localhost:11434/api/chat"
-MODEL = "llama3.1:8b"
+MODEL = "cerebro-v1"
 
 CEREBRO_IDENTITY = """You are CEREBRO Sentinel v0.1. You serve only David. Be concise, intelligent and direct. Max 3 sentences per response."""
 

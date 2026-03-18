@@ -12,7 +12,7 @@ When you detect something concerning, you alert David clearly and suggest
 a specific action to fix it. Be concise and direct. No fluff.
 """
 
-llm = ChatOllama(model="llama3.1:8b", base_url=OLLAMA_URL)
+llm = ChatOllama(model="cerebro-v1", base_url=OLLAMA_URL)
 
 def get_system_stats():
     cpu = psutil.cpu_percent(interval=1)

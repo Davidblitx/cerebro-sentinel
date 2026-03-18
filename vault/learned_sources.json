@@ -172,5 +172,17 @@
   },
   "https://www.bing.com/aclick?ld=e8tibUo24gugot1h4faZaKdTVUCUw4UQpxx8WtNrt1gLdGZYFzDHcWl1S2usOaO9I-A-PCthSZONXmk02rQse14r8fiCimlLl-dau7MEMP1t9tiDQ16pLco6FbH9HwSWnHh6rTS_oJ0tzVU5p4ToDtRFUMOCGh5StlMCljXtORlE5NDTjX_0AcGJ3Wwhc5iYHWCYHmGg&u=aHR0cHMlM2ElMmYlMmZ3d3cuZ2VuZXRlYy5jb20lMmZwcm9kdWN0cyUyZnVuaWZpZWQtc2VjdXJpdHklMmZ2c2FhcyUzZnV0bV9zb3VyY2UlM2RiaW5nJTI2dXRtX21lZGl1bSUzZHBhaWQlMjZ1dG1fdGVybSUzZG01Yi11a2klMjZ1dG1fY29udGVudCUzZGVuJTI2dXRtX2NhbXBhaWduJTNkYWx3LWVtZWEtZW4tb21uaWNhc3QlMjZ1dG1faWQlM2Q2ODg5Mzc4OTgtMTE4MDg3NzU5NDMyODA3Mi1jbG91ZC1uYXRpdmUlMjUyMHNlY3VyaXR5JTI1MjBwbGF0Zm9ybSUyNm1zY2xraWQlM2Q2OWQ0NDBjNzJjYTYxMmFlZWRiOTI5N2Y5MDM2ZDU1NQ&rlid=69d440c72ca612aeedb9297f9036d555": {
     "learned_at": "2026-03-17T02:36:41.408326"
+  },
+  "https://aws.amazon.com/blogs/training-and-certification/safe-and-sound-in-the-cloud-training/": {
+    "learned_at": "2026-03-18T02:14:27.985164"
+  },
+  "https://learn.microsoft.com/en-us/azure/devops/pipelines/security/overview?view=azure-devops": {
+    "learned_at": "2026-03-18T02:26:59.204509"
+  },
+  "https://learn.microsoft.com/en-us/azure/devops/organizations/security/security-overview?view=azure-devops": {
+    "learned_at": "2026-03-18T02:37:53.549921"
+  },
+  "https://devops.com/securing-the-devops-pipeline-tools-and-best-practices/": {
+    "learned_at": "2026-03-18T02:38:54.362825"
   }
 }

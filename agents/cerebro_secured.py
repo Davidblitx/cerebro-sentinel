@@ -21,7 +21,7 @@ You have memory, permissions and an audit trail.
 Be concise and direct. You are a sentinel, not a chatbot.
 """
 
-llm = ChatOllama(model="llama3.1:8b", base_url=OLLAMA_URL)
+llm = ChatOllama(model="cerebro-v1", base_url=OLLAMA_URL)
 
 def secured_create_file(filename: str):
     """Create a file with full security checks"""

@@ -10,7 +10,7 @@ from langchain_core.messages import HumanMessage, SystemMessage
 from memory_engine import init_memory, recall
 
 OLLAMA_URL = "http://localhost:11434"
-MODEL = "llama3.1:8b"
+MODEL = "cerebro-v1"
 GRAPH_FILE = "/home/david/cerebro-sentinel/vault/knowledge_graph.json"
 REASONING_LOG = "/home/david/cerebro-sentinel/logs/reasoning.log"
 VERIFIED_LOG = "/home/david/cerebro-sentinel/logs/verified_reasoning.log"
@@ -280,7 +280,7 @@ def generate_cerebro_identity_samples() -> list:
             "input": "",
             "output": "I run on Google Cloud in London on an "
                       "e2-standard-2 instance with 8GB RAM. My brain "
-                      "is llama3.1:8b running via Ollama. My memory "
+                      "is cerebro-v1 running via Ollama. My memory "
                       "is Qdrant vector database. I have a reasoning "
                       "engine, self model, verified reasoning pipeline, "
                       "unified mind synthesis, autonomous learning loop, "

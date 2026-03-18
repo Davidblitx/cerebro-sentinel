@@ -10,7 +10,7 @@ from langchain_core.messages import HumanMessage, SystemMessage
 from memory_engine import init_memory, recall
 
 OLLAMA_URL = "http://localhost:11434"
-MODEL = "llama3.1:8b"
+MODEL = "cerebro-v1"
 VERIFIED_LOG = "/home/david/cerebro-sentinel/logs/verified_reasoning.log"
 
 llm = ChatOllama(model=MODEL, base_url=OLLAMA_URL, timeout=180)

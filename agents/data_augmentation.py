@@ -10,7 +10,7 @@ from langchain_core.messages import HumanMessage, SystemMessage
 from memory_engine import init_memory, recall
 
 OLLAMA_URL = "http://localhost:11434"
-MODEL = "llama3.1:8b"
+MODEL = "cerebro-v1"
 TRAINING_FILE = "/home/david/cerebro-sentinel/vault/training_data.jsonl"
 
 llm = ChatOllama(model=MODEL, base_url=OLLAMA_URL, timeout=180)
@@ -200,7 +200,7 @@ def generate_david_context_samples() -> list:
         ("How do I run CEREBRO more efficiently on limited hardware?",
          "On limited hardware, reduce Ollama's context window with "
          "OLLAMA_NUM_CTX=2048, use quantized models like "
-         "llama3.1:8b-instruct-q4_0 which use 40% less RAM, and "
+         "cerebro-v1-instruct-q4_0 which use 40% less RAM, and "
          "run heavy tasks like the night loop during off-peak hours. "
          "Also consider running only one service at a time — "
          "stop the dashboard before running learning cycles to "

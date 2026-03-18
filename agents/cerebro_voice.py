@@ -26,7 +26,7 @@ Be concise and direct. You are a sentinel, not a chatbot.
 Always address David by name.
 """
 
-llm = ChatOllama(model="llama3.1:8b", base_url=OLLAMA_URL)
+llm = ChatOllama(model="cerebro-v1", base_url=OLLAMA_URL)
 
 def execute_command(command: str):
     """Parse and execute file creation commands"""

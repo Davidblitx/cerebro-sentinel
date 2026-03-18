@@ -16,7 +16,7 @@ spot issues, or offer to help — without being asked.
 Be concise, smart and direct. You are not a chatbot. You are a sentinel.
 """
 
-llm = ChatOllama(model="llama3.1:8b", base_url=OLLAMA_URL)
+llm = ChatOllama(model="cerebro-v1", base_url=OLLAMA_URL)
 
 def cerebro_analyse(filepath):
     try:

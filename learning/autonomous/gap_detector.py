@@ -12,7 +12,7 @@ OLLAMA_URL = "http://localhost:11434"
 GAPS_FILE = "/home/david/cerebro-sentinel/vault/knowledge_gaps.json"
 GRAPH_FILE = "/home/david/cerebro-sentinel/vault/knowledge_graph.json"
 
-llm = ChatOllama(model="llama3.1:8b", base_url=OLLAMA_URL, timeout=120)
+llm = ChatOllama(model="cerebro-v1", base_url=OLLAMA_URL, timeout=120)
 
 # The full DevOps + Cloud + Security curriculum
 MASTER_CURRICULUM = {

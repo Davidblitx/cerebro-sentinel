@@ -14,7 +14,7 @@ REPORT_FILE = "/home/david/cerebro-sentinel/vault/learning_report.json"
 GRAPH_FILE = "/home/david/cerebro-sentinel/vault/knowledge_graph.json"
 GAPS_FILE = "/home/david/cerebro-sentinel/vault/knowledge_gaps.json"
 
-llm = ChatOllama(model="llama3.1:8b", base_url=OLLAMA_URL, timeout=120)
+llm = ChatOllama(model="cerebro-v1", base_url=OLLAMA_URL, timeout=120)
 
 def get_last_session() -> dict:
     """Get the most recent learning session report"""

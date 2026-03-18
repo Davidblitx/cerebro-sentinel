@@ -10,7 +10,7 @@ from langchain_core.messages import HumanMessage, SystemMessage
 from memory_engine import init_memory, recall
 
 OLLAMA_URL = "http://localhost:11434"
-MODEL = "llama3.1:8b"
+MODEL = "cerebro-v1"
 MIND_LOG = "/home/david/cerebro-sentinel/logs/cerebro_mind.log"
 SELF_MODEL_FILE = "/home/david/cerebro-sentinel/vault/self_model.json"
 

@@ -8,7 +8,7 @@ from langchain_ollama import ChatOllama
 from langchain_core.messages import HumanMessage, SystemMessage
 
 OLLAMA_URL = "http://localhost:11434"
-MODEL = "llama3.1:8b"
+MODEL = "cerebro-v1"
 REASONING_LOG = "/home/david/cerebro-sentinel/logs/reasoning.log"
 GAPS_FILE = "/home/david/cerebro-sentinel/vault/knowledge_gaps.json"
 GRAPH_FILE = "/home/david/cerebro-sentinel/vault/knowledge_graph.json"

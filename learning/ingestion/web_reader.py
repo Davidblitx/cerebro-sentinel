@@ -36,7 +36,7 @@ def mark_as_learned(url: str):
 
 
 OLLAMA_URL = "http://localhost:11434"
-llm = ChatOllama(model="llama3.1:8b", base_url=OLLAMA_URL)
+llm = ChatOllama(model="cerebro-v1", base_url=OLLAMA_URL)
 
 def extract_web_text(url: str) -> str:
     """Extract clean text from any URL"""
