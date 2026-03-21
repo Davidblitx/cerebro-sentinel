@@ -14,34 +14,72 @@ GRAPH_FILE = "/home/david/cerebro-sentinel/vault/knowledge_graph.json"
 
 llm = ChatOllama(model="cerebro-v1", base_url=OLLAMA_URL, timeout=120)
 
-# The full DevOps + Cloud + Security curriculum
+# NEW CURRICULUM — AI & World Intelligence
 MASTER_CURRICULUM = {
-    "devops": [
-        "docker", "kubernetes", "helm", "docker compose",
-        "ci cd pipeline", "github actions", "jenkins",
-        "terraform", "ansible", "vagrant",
-        "prometheus", "grafana", "elk stack",
-        "nginx", "load balancing", "service mesh"
+    "ai_fundamentals": [
+        "machine learning", "deep learning", "neural networks",
+        "supervised learning", "unsupervised learning", "reinforcement learning",
+        "transformer architecture", "attention mechanism", "backpropagation",
+        "gradient descent", "overfitting", "regularization",
+        "feature engineering", "model evaluation", "cross validation"
     ],
-    "cloud": [
-        "aws iam", "aws ec2", "aws s3", "aws vpc",
-        "aws lambda", "aws rds", "aws cloudwatch",
-        "aws eks", "aws ecr", "aws route53",
-        "cloud architecture", "microservices"
+    "large_language_models": [
+        "large language models", "GPT architecture", "BERT",
+        "tokenization", "embeddings", "fine tuning",
+        "prompt engineering", "RAG retrieval augmented generation",
+        "context window", "temperature sampling", "RLHF",
+        "instruction tuning", "chain of thought reasoning",
+        "few shot learning", "zero shot learning"
     ],
-    "security": [
-        "owasp top 10", "zero trust security",
-        "ssl tls", "oauth2", "jwt tokens",
-        "penetration testing", "vulnerability scanning",
-        "secrets management", "encryption",
-        "network security", "firewall"
+    "ai_companies_research": [
+        "OpenAI GPT5", "Anthropic Claude", "Google Gemini",
+        "Meta Llama", "xAI Grok", "Mistral AI",
+        "DeepSeek China AI", "Baidu ERNIE", "Alibaba Qwen",
+        "AI safety research", "AI alignment problem",
+        "compute scaling laws", "emergent capabilities",
+        "AI regulation policy", "EU AI Act"
     ],
-    "software_engineering": [
-        "python fastapi", "rest api design",
-        "database design", "postgresql",
-        "redis caching", "message queues",
-        "git version control", "code review",
-        "unit testing", "system design"
+    "superintelligence": [
+        "artificial general intelligence", "superintelligence",
+        "intelligence explosion", "recursive self improvement",
+        "AI consciousness", "chinese room argument",
+        "orthogonality thesis", "instrumental convergence",
+        "friendly AI", "control problem", "corrigibility",
+        "whole brain emulation", "cognitive architecture",
+        "WKU wisdom knowledge understanding", "sovereign AI"
+    ],
+    "ai_infrastructure": [
+        "GPU computing", "CUDA programming", "TPU architecture",
+        "distributed training", "model parallelism",
+        "quantization", "pruning", "knowledge distillation",
+        "ONNX", "TensorRT", "vLLM inference",
+        "vector databases", "semantic search",
+        "Hugging Face ecosystem", "Ollama local deployment"
+    ],
+    "chatbots_agents": [
+        "chatbot architecture", "dialogue management",
+        "intent recognition", "entity extraction",
+        "conversational AI", "AI agents",
+        "autonomous agents", "multi agent systems",
+        "LangChain framework", "LangGraph",
+        "tool use function calling", "agentic loops",
+        "memory systems", "planning algorithms"
+    ],
+    "ai_world_impact": [
+        "AI in healthcare", "AI in finance",
+        "AI in education", "AI in agriculture",
+        "AI in Africa", "AI economic impact",
+        "job displacement automation", "AI inequality",
+        "open source AI movement", "AI ethics",
+        "bias in AI", "explainable AI",
+        "AI governance", "digital sovereignty"
+    ],
+    "ml_engineering": [
+        "MLOps", "model deployment", "model monitoring",
+        "data pipeline", "feature store", "model registry",
+        "A/B testing models", "continuous training",
+        "experiment tracking", "model serving",
+        "FastAPI ML deployment", "Docker ML containers"
     ]
 }
 
