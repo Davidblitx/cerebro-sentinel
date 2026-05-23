@@ -11,12 +11,7 @@
 
 ## What is CEREBRO Sentinel?
 
-Most AI tools are **reactive** — they wait for you to ask before they do anything.
-
-CEREBRO Sentinel is **proactive** — it watches your environment, analyses what's happening, and acts on your behalf before you have to ask.
-
-It runs entirely on your local machine. No cloud. No subscriptions. No data leaving your hardware.
-
+CEREBRO Sentinel is a local AI assistant that watches your codebase, monitors your system, and acts proactively, all running on your own hardware with no data leaving your machine.
 ---
 
 ## Core Capabilities
